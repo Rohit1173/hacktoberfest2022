@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(212, 130, 105);
+   
+   font-size: 20px;
+
+}
+.cont{
+    border: 2px solid red;
+    background-color: wheat;
+    text-align: center;
+    align-items: center;
+}
+.intro{
+    font-size: xx-large;
+    background-color: black;
+    color: yellow;
+}
+.heading{
+    font-size: 70px;
+}
