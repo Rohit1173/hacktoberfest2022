@@ -1,0 +1,71 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n1,n2,n3;
+    cout<<"Enter Number of rows and columns for 1st Matrix: ";
+    cin>>n1>>n2;
+    cout<<"Enter Number of columns for 1st Matrix: ";
+    cin>>n3;
+    int a[n1][n2],b[n2][n3],c[n1][n3];
+    cout<<"Enter Matrix of N1*N2: \n";
+    for(int i=0;i<n1;i++)
+    {
+        for(int j=0;j<n2;j++)
+        {
+            cout<<"Enter value at "<<i<<","<<j<<": ";
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Enter Matrix of N2*N1: \n";
+    for(int i=0;i<n2;i++)
+    {
+        for(int j=0;j<n3;j++)
+        {
+            cout<<"Enter value at "<<i<<","<<j<<": ";
+            cin>>b[i][j];
+        }
+    }
+    cout<<"Matrx 1:\n";
+    for(int i=0;i<n1;i++)
+    {
+        for(int j=0;j<n2;j++)
+        {
+            cout<<a[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<"Matrx 2:\n";
+    for(int i=0;i<n2;i++)
+    {
+        for(int j=0;j<n3;j++)
+        {
+            cout<<b[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    for(int i=0;i<n1;i++)
+    {
+        for(int j=0;j<n3;j++)
+            c[i][j]=0;
+    }
+    for(int i=0;i<n1;i++)
+    {
+        for(int j=0;j<n3;j++)
+        {
+            for(int k=0;k<n2;k++)
+            {
+                c[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
+    cout<<"Matrix Multipication: \n";
+    for(int i=0;i<n1;i++)
+    {
+        for(int j=0;j<n3;j++)
+        {
+            cout<<c[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
